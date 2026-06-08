@@ -1,7 +1,12 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <HelloWorld />
+  <Tasks />
 </template>
+
+<script>
+import Tasks from './components/tasks.vue'
+
+export default {
+  name: 'App',
+  components: { Tasks }
+}
+</script>
