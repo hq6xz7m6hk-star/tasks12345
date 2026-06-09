@@ -3,15 +3,51 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* ── тёмная тема ── */
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+body.dark-mode input {
+  background-color: #16213e;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+body.dark-mode button {
+  background-color: #0f3460;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+body.dark-mode .theme-btn {
+  background-color: #e0a020;
+  color: #1a1a2e;
+  border-color: #e0a020;
+}
+body.dark-mode .card {
+  background-color: #16213e;
+  border-color: #555;
+}
+body.dark-mode .matrix td {
+  border-color: #555;
+}
+body.dark-mode .result {
+  color: #66bb6a;
+}
+body.dark-mode .divider {
+  border-top-color: #555;
+}
+
+/* ── общие элементы ── */
 input {
   padding: 8px;
   width: 100%;
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-
 button {
   padding: 8px 16px;
   cursor: pointer;
@@ -19,3 +55,83 @@ button {
 
 .error  { color: red;   margin-top: 10px; }
 .result { color: green; margin-top: 10px; }
+
+.app-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ── разделитель ── */
+.divider {
+  border: none;
+  border-top: 2px solid #aaa;
+  margin: 32px 0;
+}
+
+/* ── матрица (задание 1.3) ── */
+.matrix {
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+.matrix td {
+  border: 1px solid #aaa;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ── подсказка ── */
+.hint {
+  font-size: 12px;
+  color: #888;
+  margin: 4px 0 0;
+}
+
+/* ── форма (задание 2) ── */
+.form {
+  margin-top: 16px;
+}
+.form-group {
+  margin-bottom: 12px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.theme-btn {
+  margin-bottom: 20px;
+  background-color: #f0c040;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.card {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+.card h3 {
+  margin-top: 0;
+}
+
+/* ── конвертер (задание 3) ── */
+.converter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.converter .form-group {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 0;
+}
+.arrow {
+  font-size: 26px;
+  margin-top: 18px;
+  flex-shrink: 0;
+  color: #555;
+}
